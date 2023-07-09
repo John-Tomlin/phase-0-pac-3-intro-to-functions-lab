@@ -16,7 +16,7 @@ describe('whisper(string)', function() {
 describe('logShout(string)', function() {
   it('takes a string argument and logs it in all caps using console.log()', function() {
     const spy = expect.spyOn(console, 'log').andCallThrough();
-
+    
     logShout('hello');
 
     expect(spy).toHaveBeenCalledWith('HELLO');
@@ -41,7 +41,7 @@ describe('sayHiToHeadphonedRoommate(string)', function() {
   it('returns "I can\'t hear you!" if `string` is lowercase', function() {
     expect(sayHiToHeadphonedRoommate('hello')).toEqual("I can't hear you!");
   })
-
+    
   it('returns "YES INDEED!" if `string` is uppercase', function() {
     expect(sayHiToHeadphonedRoommate('HELLO')).toEqual("YES INDEED!");
   })
